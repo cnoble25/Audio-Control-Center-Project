@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MbwLpm2vhXE=",
+  "dgSpecHash": "tTLsyBFejAg=",
   "success": true,
   "projectFilePath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carso\\.nuget\\packages\\audioswitcher.audioapi\\3.0.0\\audioswitcher.audioapi.3.0.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\audioswitcher.audioapi.coreaudio\\3.0.3\\audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\communitytoolkit.maui\\11.2.0\\communitytoolkit.maui.11.2.0.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\communitytoolkit.maui.core\\11.2.0\\communitytoolkit.maui.core.11.2.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\googlegson\\2.11.0.5\\googlegson.2.11.0.5.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.4\\microsoft.extensions.configuration.9.0.4.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
@@ -52,6 +54,7 @@
     "C:\\Users\\carso\\.nuget\\packages\\syncfusion.maui.core\\29.2.7\\syncfusion.maui.core.29.2.7.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\syncfusion.maui.sliders\\29.2.7\\syncfusion.maui.sliders.29.2.7.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\system.io.ports\\9.0.5\\system.io.ports.9.0.5.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\system.speech\\9.0.0\\system.speech.9.0.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.11\\xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",

@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[3.0.3, )"
             },
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.5, )"
@@ -121,6 +125,10 @@
             "AudioSwitcher.AudioApi.CoreAudio": {
               "target": "Package",
               "version": "[3.0.3, )"
+            },
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[11.2.0, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -173,6 +181,10 @@
               "target": "Package",
               "version": "[3.0.3, )"
             },
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[9.0.5, )"
@@ -224,6 +236,10 @@
             "AudioSwitcher.AudioApi.CoreAudio": {
               "target": "Package",
               "version": "[3.0.3, )"
+            },
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[11.2.0, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",

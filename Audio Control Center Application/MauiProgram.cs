@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-
+using Syncfusion.Maui.Core.Hosting;
+using CommunityToolkit.Maui;
 namespace Audio_Control_Center_Application
 {
     public static class MauiProgram
@@ -9,6 +10,8 @@ namespace Audio_Control_Center_Application
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
