@@ -4,7 +4,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.Text.Json;
 using Syncfusion.Maui.Sliders;
-
+using System.Management;
 
 namespace Audio_Control_Center_Application;
 
@@ -70,8 +70,9 @@ public class SliderBuilder
             Label applicationNameLabel = new Label
             {
                 Text = sliders[i].ApplicationName,
-                FontSize = 20,
-                Margin = 0
+                FontSize = 30,
+                Margin = 0,
+                HorizontalOptions = LayoutOptions.Center
             };
             VerticalStackLayouts[i].Add(applicationNameLabel);
             sliders[i].SetApplicationNameLabel(applicationNameLabel);
@@ -80,12 +81,15 @@ public class SliderBuilder
             SfSlider controlledSlider = new SfSlider
             {
                 Value = sliders[i].Value,
+                HeightRequest = 600,
+                WidthRequest = 200,
                 Maximum = 100,
                 Minimum = 0,
                 Margin = 0,
                 Interval = 10,
                 ShowTicks = true,
-                Orientation = SliderOrientation.Vertical
+                Orientation = SliderOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.Center
             };
             VerticalStackLayouts[i].Add(controlledSlider);
             sliders[i].SetControlledSlider(controlledSlider);
@@ -96,7 +100,8 @@ public class SliderBuilder
                 Source = "discord.png",
                 MaximumHeightRequest = 50,
                 MaximumWidthRequest = 50,
-                Margin = 0
+                Margin = 0,
+                HorizontalOptions = LayoutOptions.Center
             };
             VerticalStackLayouts[i].Add(applicationIconButton);
             sliders[i].SetApplicationIconButton(applicationIconButton);
@@ -113,9 +118,22 @@ public class SliderBuilder
     {
         try
         {
-            serialPort = new SerialPort("COM9", 20000)
+            
+            serialPort = new SerialPort("COM9", 31250)
             {
-                 // Set a timeout to avoid indefinite blocking
+                
+                DtrEnable = true, // Enable DTR to reset the Arduino
+                RtsEnable = true, // Enable RTS if needed
+               
+            };
+            serialPort.Open();
+            serialPort.Close();
+            serialPort = new SerialPort("COM9", 31250)
+            {
+                
+                DtrEnable = true, // Enable DTR to reset the Arduino
+                RtsEnable = true, // Enable RTS if needed
+                ReadTimeout = 500
             };
             serialPort.Open();
             Thread.Sleep(2000); // Wait for initialization
@@ -139,9 +157,9 @@ public class SliderBuilder
             {
                 sliders[i] = new SliderClass
                 {
-                    Value = double.Parse(sliderValue[i]),
+                    Value = Convert.ToDouble(sliderValue[i]),
                     ApplicationPath = $"ApplicationPath_{i}",
-                    ApplicationName = "discord"
+                    ApplicationName = "Discord"
                 };
             }
         }
@@ -179,12 +197,16 @@ public class SliderBuilder
             }
             double[] sliderValues = ConvertStringToDoubleArray(data);
             Debug.WriteLine($"Received data: {data}");
+           
+            
             MainThread.BeginInvokeOnMainThread(() =>
             {
                 for (int i = 0; i < sliderValues.Length && i < sliders.Length; i++)
                 {
                     sliders[i].SetValue(100*sliderValues[i]/1030);
                     
+                    
+
                    
                 }
             });
@@ -198,11 +220,27 @@ public class SliderBuilder
     private static double[] ConvertStringToDoubleArray(string input)
     {
         if (string.IsNullOrWhiteSpace(input))
+        {
+            Debug.WriteLine("Input string is empty or null.");
             return new double[sliders.Length];
+        }
 
         return input
             .Split('|', StringSplitOptions.RemoveEmptyEntries)
-            .Select(s => double.TryParse(s, out var n) ? n : 0)
+            .Select(s =>
+            {
+                if (double.TryParse(s, out var value))
+                {
+                    return value;
+                }
+                else
+                {
+                    Debug.WriteLine($"Invalid value in input: {s}");
+                    return 0; // Default to 0 for invalid values
+                }
+            })
             .ToArray();
     }
+    
+    
 }

@@ -5,6 +5,8 @@ using CSCore.CoreAudioAPI; // Required for Core Audio APIs from CSCore library
 
 public static class AudioController
 {
+    
+    private static readonly object audioControlLock = new object();
     /// <summary>
     /// Sets the master volume level for a specific application's audio session.
     /// This directly affects the volume slider for that application in the Windows Volume Mixer.
@@ -12,88 +14,77 @@ public static class AudioController
     /// <param name="processName">The name of the process (e.g., "chrome", "spotify", "vlc"). Case-insensitive.</param>
     /// <param name="volumeScalar">The desired volume level as a scalar (float) between 0.0f (mute) and 1.0f (max volume).</param>
     public static void SetApplicationVolume(string processName, double volumeScalar)
+{
+    Task.Run(() =>
+    {
+        lock (audioControlLock)
         {
-            // Run the method on an MTA thread
-            var thread = new Thread(() =>
+            using (var enumerator = new MMDeviceEnumerator())
             {
-                // Clamp the volumeScalar to ensure it's within the valid range [0.0f, 1.0f]
-                volumeScalar = Math.Clamp(volumeScalar, 0.0f, 1.0f);
-
-                // Create an MMDeviceEnumerator to enumerate audio devices
-                using (var enumerator = new MMDeviceEnumerator())
+                using (var device = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia))
                 {
-                    // Get the default audio rendering (playback) endpoint device
-                    using (var device = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia))
+                    if (string.IsNullOrWhiteSpace(processName))
                     {
-                        if (string.IsNullOrWhiteSpace(processName))
+                        using (var endpointVolume = AudioEndpointVolume.FromDevice(device))
                         {
-                            // Control the system's master volume
-                            using (var endpointVolume = AudioEndpointVolume.FromDevice(device))
-                            {
-                                endpointVolume.MasterVolumeLevelScalar = Convert.ToSingle(volumeScalar);
-                                Console.WriteLine($"System master volume set to {volumeScalar * 100:F0}%.");
-                            }
+                            endpointVolume.MasterVolumeLevelScalar = Convert.ToSingle(volumeScalar);
                         }
-                        else
+                    }
+                    else
+                    {
+                        using (var sessionManager = AudioSessionManager2.FromMMDevice(device))
                         {
-                            // Get the AudioSessionManager2 for the selected device
-                            using (var sessionManager = AudioSessionManager2.FromMMDevice(device))
+                            using (var sessionEnumerator = sessionManager.GetSessionEnumerator())
                             {
-                                // Get an enumerator for all active audio sessions
-                                using (var sessionEnumerator = sessionManager.GetSessionEnumerator())
+                                foreach (var session in sessionEnumerator)
                                 {
-                                    foreach (var session in sessionEnumerator)
+                                    using (session)
                                     {
-                                        using (session)
+                                        try
                                         {
-                                            try
+                                            var sessionControl2 = session.QueryInterface<AudioSessionControl2>();
+                                            if (sessionControl2 != null)
                                             {
-                                                var sessionControl2 = session.QueryInterface<AudioSessionControl2>();
-                                                if (sessionControl2 != null)
+                                                var processId = sessionControl2.ProcessID;
+                                                Process process = null;
+
+                                                try
                                                 {
-                                                    var processId = sessionControl2.ProcessID;
-                                                    Process process = null;
+                                                    process = Process.GetProcessById((int)processId);
+                                                }
+                                                catch (ArgumentException)
+                                                {
+                                                    continue;
+                                                }
 
-                                                    try
+                                                if (process != null && process.ProcessName.Equals(processName, StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    using (var simpleVolume = session.QueryInterface<SimpleAudioVolume>())
                                                     {
-                                                        process = Process.GetProcessById((int)processId);
-                                                    }
-                                                    catch (ArgumentException)
-                                                    {
-                                                        continue;
-                                                    }
-
-                                                    if (process != null && process.ProcessName.Equals(processName, StringComparison.OrdinalIgnoreCase))
-                                                    {
-                                                        using (var simpleVolume = session.QueryInterface<SimpleAudioVolume>())
+                                                        if (simpleVolume != null)
                                                         {
-                                                            if (simpleVolume != null)
-                                                            {
-                                                                simpleVolume.MasterVolume = Convert.ToSingle(volumeScalar);
-                                                                Console.WriteLine($"Successfully set volume for '{process.ProcessName}' (PID: {processId}) to {volumeScalar * 100:F0}%.");
-                                                                return;
-                                                            }
+                                                            simpleVolume.MasterVolume = Convert.ToSingle(volumeScalar);
+                                                            Console.WriteLine($"Successfully set volume for '{process.ProcessName}' (PID: {processId}) to {volumeScalar * 100:F0}%.");
+                                                            return;
                                                         }
                                                     }
                                                 }
                                             }
-                                            catch (Exception ex)
-                                            {
-                                                // Log any errors
-                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Console.WriteLine($"Error controlling volume for process: {ex.Message}");
                                         }
                                     }
                                 }
                             }
-                            Console.WriteLine($"Application '{processName}' not found or its volume could not be controlled.");
                         }
+                        Console.WriteLine($"Application '{processName}' not found or its volume could not be controlled.");
                     }
                 }
-            });
-
-            // Set the thread to MTA
-            thread.SetApartmentState(ApartmentState.MTA);
-            thread.Start();
+            }
+        }
+    });
     }
     public static string[] GetAvailableProcesses()
         {

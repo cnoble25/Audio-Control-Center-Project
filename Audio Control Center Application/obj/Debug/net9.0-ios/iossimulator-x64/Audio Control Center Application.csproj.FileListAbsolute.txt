@@ -21,7 +21,9 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Licensing.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Core.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Sliders.dll
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\System.CodeDom.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\System.IO.Ports.dll
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\System.Management.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\ca\Microsoft.Maui.Controls.resources.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-ios\iossimulator-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -271,7 +273,6 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\discord.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -284,6 +285,7 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\discord.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.stamp
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.outputs
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist

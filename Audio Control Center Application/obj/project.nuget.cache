@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q/qP7xwYBAI=",
+  "dgSpecHash": "fxRjHZieOig=",
   "success": true,
   "projectFilePath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
   "expectedPackageFiles": [
@@ -52,7 +52,9 @@
     "C:\\Users\\carso\\.nuget\\packages\\syncfusion.licensing\\29.2.7\\syncfusion.licensing.29.2.7.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\syncfusion.maui.core\\29.2.7\\syncfusion.maui.core.29.2.7.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\syncfusion.maui.sliders\\29.2.7\\syncfusion.maui.sliders.29.2.7.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\system.codedom\\10.0.0-preview.4.25258.110\\system.codedom.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\system.io.ports\\9.0.5\\system.io.ports.9.0.5.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\system.management\\10.0.0-preview.4.25258.110\\system.management.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\system.speech\\9.0.0\\system.speech.9.0.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",

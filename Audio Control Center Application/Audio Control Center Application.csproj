@@ -66,6 +66,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
 		<PackageReference Include="Syncfusion.Maui.Sliders" Version="29.2.7" />
 		<PackageReference Include="System.IO.Ports" Version="9.0.5" />
+		<PackageReference Include="System.Management" Version="10.0.0-preview.4.25258.110" />
 	</ItemGroup>
 
 	<ItemGroup>

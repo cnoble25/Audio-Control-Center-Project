@@ -342,7 +342,9 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Licensing.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Core.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Sliders.dll
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.CodeDom.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.IO.Ports.dll
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Management.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll

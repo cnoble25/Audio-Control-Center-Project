@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 using Audio_Control_Center_Application;
+using System.Management;
+using System.IO.Ports;
 // using Microsoft.UI.Xaml.Media.Animation;
 
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -16,7 +18,8 @@ namespace Audio_Control_Center_Application
             InitializeComponent();
             SliderBuilder builder = new SliderBuilder(Container);
             sampleText.Text = JsonSerializer.Serialize(AudioController.GetAvailableProcesses());
-
+            
+            
         }
 
 
@@ -28,6 +31,8 @@ namespace Audio_Control_Center_Application
             // Handle button click event
             DisplayAlert("Button Clicked", "You clicked the button!", "OK");
         }
+        
+        
 
     }
 }
