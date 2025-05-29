@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tTLsyBFejAg=",
+  "dgSpecHash": "Q/qP7xwYBAI=",
   "success": true,
   "projectFilePath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\carso\\.nuget\\packages\\audioswitcher.audioapi\\3.0.0\\audioswitcher.audioapi.3.0.0.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\audioswitcher.audioapi.coreaudio\\3.0.3\\audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\communitytoolkit.maui\\11.2.0\\communitytoolkit.maui.11.2.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\communitytoolkit.maui.core\\11.2.0\\communitytoolkit.maui.core.11.2.0.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\cscore\\1.2.1.2\\cscore.1.2.1.2.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\googlegson\\2.11.0.5\\googlegson.2.11.0.5.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.4\\microsoft.extensions.configuration.9.0.4.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
@@ -151,23 +150,11 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'AudioSwitcher.AudioApi 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-android35.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'CSCore 1.2.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-android35.0'. This package may not be fully compatible with your project.",
       "projectPath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
       "warningLevel": 1,
       "filePath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
-      "libraryId": "AudioSwitcher.AudioApi",
-      "targetGraphs": [
-        "net9.0-android35.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'AudioSwitcher.AudioApi.CoreAudio 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-android35.0'. This package may not be fully compatible with your project.",
-      "projectPath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
-      "warningLevel": 1,
-      "filePath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
-      "libraryId": "AudioSwitcher.AudioApi.CoreAudio",
+      "libraryId": "CSCore",
       "targetGraphs": [
         "net9.0-android35.0"
       ]

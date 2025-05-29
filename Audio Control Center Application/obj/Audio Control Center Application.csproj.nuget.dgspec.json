@@ -67,9 +67,9 @@
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
           "dependencies": {
-            "AudioSwitcher.AudioApi.CoreAudio": {
+            "CSCore": {
               "target": "Package",
-              "version": "[3.0.3, )"
+              "version": "[1.2.1.2, )"
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
@@ -122,9 +122,9 @@
         "net9.0-ios18.4": {
           "targetAlias": "net9.0-ios",
           "dependencies": {
-            "AudioSwitcher.AudioApi.CoreAudio": {
+            "CSCore": {
               "target": "Package",
-              "version": "[3.0.3, )"
+              "version": "[1.2.1.2, )"
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
@@ -177,9 +177,9 @@
         "net9.0-maccatalyst18.4": {
           "targetAlias": "net9.0-maccatalyst",
           "dependencies": {
-            "AudioSwitcher.AudioApi.CoreAudio": {
+            "CSCore": {
               "target": "Package",
-              "version": "[3.0.3, )"
+              "version": "[1.2.1.2, )"
             },
             "CommunityToolkit.Maui": {
               "target": "Package",
@@ -233,9 +233,9 @@
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
           "dependencies": {
-            "AudioSwitcher.AudioApi.CoreAudio": {
+            "CSCore": {
               "target": "Package",
-              "version": "[3.0.3, )"
+              "version": "[1.2.1.2, )"
             },
             "CommunityToolkit.Maui": {
               "target": "Package",

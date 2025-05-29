@@ -10,93 +10,97 @@
             Spacing="25"
             VerticalOptions="Center">
             
+            <Label
+                x:Name="sampleText"/>
+            
             <HorizontalStackLayout
                 HorizontalOptions="Center"
-                Spacing="100">
-                <VerticalStackLayout
-                    Padding="0">
-                   
-                    <Label
-                        Text="Discord"
-                        FontSize="20"
-                        Margin="0"/>
-                    <sliders:SfSlider 
-                        Maximum="100"
-                        Interval="10"
-                        ShowTicks="True"
-                        Orientation="Vertical"
-                        Margin="0"
-                        />
-                    <ImageButton
-                        Source="discord.png"
-                        MaximumWidthRequest="50"
-                        MaximumHeightRequest="50"
-                        Margin="0"
-                    />
-                </VerticalStackLayout>
-                <VerticalStackLayout
-                    Padding="0">
-                   
-                    <Label
-                        Text="Discord"
-                        FontSize="20"
-                        Margin="0"/>
-                    <sliders:SfSlider 
-                        Maximum="100"
-                        Interval="10"
-                        ShowTicks="True"
-                        Orientation="Vertical"
-                        Margin="0"
-                    />
-                    <ImageButton
-                        Source="discord.png"
-                        MaximumWidthRequest="50"
-                        MaximumHeightRequest="50"
-                        Margin="0"
-                    />
-                </VerticalStackLayout>
-                <VerticalStackLayout
-                    Padding="0">
-                   
-                    <Label
-                        Text="Discord"
-                        FontSize="20"
-                        Margin="0"/>
-                    <sliders:SfSlider 
-                        Maximum="100"
-                        Interval="10"
-                        ShowTicks="True"
-                        Orientation="Vertical"
-                        Margin="0"
-                    />
-                    <ImageButton
-                        Source="discord.png"
-                        MaximumWidthRequest="50"
-                        MaximumHeightRequest="50"
-                        Margin="0"
-                    />
-                </VerticalStackLayout>
-                <VerticalStackLayout
-                    Padding="0">
-                   
-                    <Label
-                        Text="Discord"
-                        FontSize="20"
-                        Margin="0"/>
-                    <sliders:SfSlider 
-                        Maximum="100"
-                        Interval="10"
-                        ShowTicks="True"
-                        Orientation="Vertical"
-                        Margin="0"
-                    />
-                    <ImageButton
-                        Source="discord.png"
-                        MaximumWidthRequest="50"
-                        MaximumHeightRequest="50"
-                        Margin="0"
-                    />
-                </VerticalStackLayout>
+                Spacing="100"
+                x:Name = "Container">
+                <!-- <VerticalStackLayout -->
+                <!--     Padding="0"> -->
+                <!--     -->
+                <!--     <Label -->
+                <!--         Text="Discord" -->
+                <!--         FontSize="20" -->
+                <!--         Margin="0"/> -->
+                <!--     <sliders:SfSlider  -->
+                <!--         Maximum="100" -->
+                <!--         Interval="10" -->
+                <!--         ShowTicks="True" -->
+                <!--         Orientation="Vertical" -->
+                <!--         Margin="0" -->
+                <!--         /> -->
+                <!--     <ImageButton -->
+                <!--         Source="discord.png" -->
+                <!--         MaximumWidthRequest="50" -->
+                <!--         MaximumHeightRequest="50" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!-- </VerticalStackLayout> -->
+                <!-- <VerticalStackLayout -->
+                <!--     Padding="0"> -->
+                <!--     -->
+                <!--     <Label -->
+                <!--         Text="Discord" -->
+                <!--         FontSize="20" -->
+                <!--         Margin="0"/> -->
+                <!--     <sliders:SfSlider  -->
+                <!--         Maximum="100" -->
+                <!--         Interval="10" -->
+                <!--         ShowTicks="True" -->
+                <!--         Orientation="Vertical" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!--     <ImageButton -->
+                <!--         Source="discord.png" -->
+                <!--         MaximumWidthRequest="50" -->
+                <!--         MaximumHeightRequest="50" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!-- </VerticalStackLayout> -->
+                <!-- <VerticalStackLayout -->
+                <!--     Padding="0"> -->
+                <!--     -->
+                <!--     <Label -->
+                <!--         Text="Discord" -->
+                <!--         FontSize="20" -->
+                <!--         Margin="0"/> -->
+                <!--     <sliders:SfSlider  -->
+                <!--         Maximum="100" -->
+                <!--         Interval="10" -->
+                <!--         ShowTicks="True" -->
+                <!--         Orientation="Vertical" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!--     <ImageButton -->
+                <!--         Source="discord.png" -->
+                <!--         MaximumWidthRequest="50" -->
+                <!--         MaximumHeightRequest="50" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!-- </VerticalStackLayout> -->
+                <!-- <VerticalStackLayout -->
+                <!--     Padding="0"> -->
+                <!--     -->
+                <!--     <Label -->
+                <!--         Text="Discord" -->
+                <!--         FontSize="20" -->
+                <!--         Margin="0"/> -->
+                <!--     <sliders:SfSlider  -->
+                <!--         Maximum="100" -->
+                <!--         Interval="10" -->
+                <!--         ShowTicks="True" -->
+                <!--         Orientation="Vertical" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!--     <ImageButton -->
+                <!--         Source="discord.png" -->
+                <!--         MaximumWidthRequest="50" -->
+                <!--         MaximumHeightRequest="50" -->
+                <!--         Margin="0" -->
+                <!--     /> -->
+                <!-- </VerticalStackLayout> -->
                 
                 
             </HorizontalStackLayout>

@@ -291,6 +291,7 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLogo.scale-125.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLogo.scale-100.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appicon.ico
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\discord.scale-100.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Audio Control Center Application.exe
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Audio Control Center Application.deps.json
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Audio Control Center Application.runtimeconfig.json
@@ -298,10 +299,9 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Audio Control Center Application.pdb
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.dll
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AudioSwitcher.AudioApi.dll
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AudioSwitcher.AudioApi.CoreAudio.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CSCore.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -460,6 +460,7 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\discord.scale-100.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Audio Control Center Application.AssemblyInfoInputs.cache
@@ -488,5 +489,3 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\discord.scale-100.png
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\discord.scale-100.png

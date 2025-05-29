@@ -2,27 +2,6 @@
   "version": 3,
   "targets": {
     "net9.0-android35.0": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -54,6 +33,19 @@
         "runtime": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -3575,27 +3567,6 @@
       }
     },
     "net9.0-android35.0/android-arm64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -3627,6 +3598,19 @@
         "runtime": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -6130,27 +6114,6 @@
       }
     },
     "net9.0-android35.0/android-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -6182,6 +6145,19 @@
         "runtime": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -8685,27 +8661,6 @@
       }
     },
     "net9.0-android35.0/iossimulator-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -8737,6 +8692,19 @@
         "runtime": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -11192,27 +11160,6 @@
       }
     },
     "net9.0-android35.0/maccatalyst-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -11244,6 +11191,19 @@
         "runtime": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -13747,27 +13707,6 @@
       }
     },
     "net9.0-android35.0/win10-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -13799,6 +13738,19 @@
         "runtime": {
           "lib/net9.0-android35.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -16254,27 +16206,6 @@
       }
     },
     "net9.0-ios18.4": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -16306,6 +16237,19 @@
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -17909,27 +17853,6 @@
       }
     },
     "net9.0-ios18.4/android-arm64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -17961,6 +17884,19 @@
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -18546,27 +18482,6 @@
       }
     },
     "net9.0-ios18.4/android-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -18598,6 +18513,19 @@
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -19183,27 +19111,6 @@
       }
     },
     "net9.0-ios18.4/iossimulator-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -19235,6 +19142,19 @@
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -19772,27 +19692,6 @@
       }
     },
     "net9.0-ios18.4/maccatalyst-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -19824,6 +19723,19 @@
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -20409,27 +20321,6 @@
       }
     },
     "net9.0-ios18.4/win10-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -20461,6 +20352,19 @@
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -20998,27 +20902,6 @@
       }
     },
     "net9.0-maccatalyst18.4": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -21050,6 +20933,19 @@
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -22653,27 +22549,6 @@
       }
     },
     "net9.0-maccatalyst18.4/android-arm64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -22705,6 +22580,19 @@
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -23290,27 +23178,6 @@
       }
     },
     "net9.0-maccatalyst18.4/android-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -23342,6 +23209,19 @@
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -23927,27 +23807,6 @@
       }
     },
     "net9.0-maccatalyst18.4/iossimulator-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -23979,6 +23838,19 @@
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -24516,27 +24388,6 @@
       }
     },
     "net9.0-maccatalyst18.4/maccatalyst-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -24568,6 +24419,19 @@
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -25153,27 +25017,6 @@
       }
     },
     "net9.0-maccatalyst18.4/win10-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -25205,6 +25048,19 @@
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -25742,27 +25598,6 @@
       }
     },
     "net9.0-windows10.0.19041": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -25795,6 +25630,19 @@
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -27660,27 +27508,6 @@
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -27713,6 +27540,19 @@
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -28492,27 +28332,6 @@
       }
     },
     "net9.0-windows10.0.19041/android-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -28545,6 +28364,19 @@
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -29324,27 +29156,6 @@
       }
     },
     "net9.0-windows10.0.19041/iossimulator-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -29377,6 +29188,19 @@
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -30108,27 +29932,6 @@
       }
     },
     "net9.0-windows10.0.19041/maccatalyst-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -30161,6 +29964,19 @@
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -30940,27 +30756,6 @@
       }
     },
     "net9.0-windows10.0.19041/win10-x64": {
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {}
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "type": "package",
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "compile": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {}
-        }
-      },
       "CommunityToolkit.Maui/11.2.0": {
         "type": "package",
         "dependencies": {
@@ -30993,6 +30788,19 @@
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
           }
         }
       },
@@ -31735,33 +31543,6 @@
     }
   },
   "libraries": {
-    "AudioSwitcher.AudioApi/3.0.0": {
-      "sha512": "AiYO8fCawsu/v6rZgDWta55GYzh9vs/FocW9xKhEGF3xsUJIgPaVsWeeBwoexMttueW6E8RS0Vp0o8w8dodjyQ==",
-      "type": "package",
-      "path": "audioswitcher.audioapi/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "audioswitcher.audioapi.3.0.0.nupkg.sha512",
-        "audioswitcher.audioapi.nuspec",
-        "lib/net40/AudioSwitcher.AudioApi.dll"
-      ]
-    },
-    "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-      "sha512": "O0XrFLuND0Ti/UmW24PvX36Tfhify6jOBpuIKw0wmWemzKQ6fS1uH36a+bNRny9LdqPGIQnFfDyieLo1otb/Lw==",
-      "type": "package",
-      "path": "audioswitcher.audioapi.coreaudio/3.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512",
-        "audioswitcher.audioapi.coreaudio.nuspec",
-        "lib/net40/AudioSwitcher.AudioApi.CoreAudio.dll",
-        "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll",
-        "lib/net472/AudioSwitcher.AudioApi.CoreAudio.dll",
-        "lib/net48/AudioSwitcher.AudioApi.CoreAudio.dll"
-      ]
-    },
     "CommunityToolkit.Maui/11.2.0": {
       "sha512": "QkkdOEGnT3MMNXpgYHT0MktofSdCKb+oCszzAINZvq0qbX+QKKCHOsSvGcv48na0BuRWsWxdaZgHW/zPoeZUcw==",
       "type": "package",
@@ -31813,6 +31594,19 @@
         "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
         "lib/net9.0/CommunityToolkit.Maui.Core.dll",
         "lib/net9.0/CommunityToolkit.Maui.Core.xml"
+      ]
+    },
+    "CSCore/1.2.1.2": {
+      "sha512": "DoQKUcdZLQawo3mOg8CvujJD9YkvTt6NtEu7S+OCo8+ySl8eCeUw4LFyL2E1OcAkPU918HZM6sUNcvIMcXWg6g==",
+      "type": "package",
+      "path": "cscore/1.2.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cscore.1.2.1.2.nupkg.sha512",
+        "cscore.nuspec",
+        "lib/net35-client/CSCore.XML",
+        "lib/net35-client/CSCore.dll"
       ]
     },
     "GoogleGson/2.11.0.5": {
@@ -36604,7 +36398,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-android35.0": [
-      "AudioSwitcher.AudioApi.CoreAudio >= 3.0.3",
+      "CSCore >= 1.2.1.2",
       "CommunityToolkit.Maui >= 11.2.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
@@ -36613,7 +36407,7 @@
       "System.IO.Ports >= 9.0.5"
     ],
     "net9.0-ios18.4": [
-      "AudioSwitcher.AudioApi.CoreAudio >= 3.0.3",
+      "CSCore >= 1.2.1.2",
       "CommunityToolkit.Maui >= 11.2.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
@@ -36622,7 +36416,7 @@
       "System.IO.Ports >= 9.0.5"
     ],
     "net9.0-maccatalyst18.4": [
-      "AudioSwitcher.AudioApi.CoreAudio >= 3.0.3",
+      "CSCore >= 1.2.1.2",
       "CommunityToolkit.Maui >= 11.2.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
@@ -36631,7 +36425,7 @@
       "System.IO.Ports >= 9.0.5"
     ],
     "net9.0-windows10.0.19041": [
-      "AudioSwitcher.AudioApi.CoreAudio >= 3.0.3",
+      "CSCore >= 1.2.1.2",
       "CommunityToolkit.Maui >= 11.2.0",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.70",
@@ -36706,9 +36500,9 @@
       "net9.0-android35.0": {
         "targetAlias": "net9.0-android",
         "dependencies": {
-          "AudioSwitcher.AudioApi.CoreAudio": {
+          "CSCore": {
             "target": "Package",
-            "version": "[3.0.3, )"
+            "version": "[1.2.1.2, )"
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
@@ -36761,9 +36555,9 @@
       "net9.0-ios18.4": {
         "targetAlias": "net9.0-ios",
         "dependencies": {
-          "AudioSwitcher.AudioApi.CoreAudio": {
+          "CSCore": {
             "target": "Package",
-            "version": "[3.0.3, )"
+            "version": "[1.2.1.2, )"
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
@@ -36816,9 +36610,9 @@
       "net9.0-maccatalyst18.4": {
         "targetAlias": "net9.0-maccatalyst",
         "dependencies": {
-          "AudioSwitcher.AudioApi.CoreAudio": {
+          "CSCore": {
             "target": "Package",
-            "version": "[3.0.3, )"
+            "version": "[1.2.1.2, )"
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
@@ -36872,9 +36666,9 @@
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
         "dependencies": {
-          "AudioSwitcher.AudioApi.CoreAudio": {
+          "CSCore": {
             "target": "Package",
-            "version": "[3.0.3, )"
+            "version": "[1.2.1.2, )"
           },
           "CommunityToolkit.Maui": {
             "target": "Package",
@@ -36948,18 +36742,8 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'AudioSwitcher.AudioApi 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-android35.0'. This package may not be fully compatible with your project.",
-      "libraryId": "AudioSwitcher.AudioApi",
-      "targetGraphs": [
-        "net9.0-android35.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'AudioSwitcher.AudioApi.CoreAudio 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-android35.0'. This package may not be fully compatible with your project.",
-      "libraryId": "AudioSwitcher.AudioApi.CoreAudio",
+      "message": "Package 'CSCore 1.2.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-android35.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CSCore",
       "targetGraphs": [
         "net9.0-android35.0"
       ]

@@ -1,10 +1,9 @@
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.runtimeconfig.json
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.pdb
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\AudioSwitcher.AudioApi.dll
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\AudioSwitcher.AudioApi.CoreAudio.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.Core.dll
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CSCore.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -275,6 +274,7 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\discord.png
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
@@ -305,4 +305,3 @@ E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Cente
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.pdb
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.genruntimeconfig.cache
 E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\Audio Control Center Application.dll
-E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\discord.png

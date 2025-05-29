@@ -9,7 +9,7 @@
     ".NETCoreApp,Version=v9.0/win10-x64": {
       "Audio Control Center Application/1.0": {
         "dependencies": {
-          "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
+          "CSCore": "1.2.1.2",
           "CommunityToolkit.Maui": "11.2.0",
           "Microsoft.Extensions.Logging.Debug": "9.0.5",
           "Microsoft.Maui.Controls": "9.0.70",
@@ -31,25 +31,6 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.48161"
-          }
-        }
-      },
-      "AudioSwitcher.AudioApi/3.0.0": {
-        "runtime": {
-          "lib/net40/AudioSwitcher.AudioApi.dll": {
-            "assemblyVersion": "3.0.0.209",
-            "fileVersion": "3.0.0.256"
-          }
-        }
-      },
-      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-        "dependencies": {
-          "AudioSwitcher.AudioApi": "3.0.0"
-        },
-        "runtime": {
-          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {
-            "assemblyVersion": "3.0.0.209",
-            "fileVersion": "3.0.3.420"
           }
         }
       },
@@ -75,6 +56,14 @@
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "assemblyVersion": "11.2.0.0",
             "fileVersion": "11.2.0.0"
+          }
+        }
+      },
+      "CSCore/1.2.1.2": {
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "assemblyVersion": "1.2.1.2",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -615,20 +604,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AudioSwitcher.AudioApi/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-AiYO8fCawsu/v6rZgDWta55GYzh9vs/FocW9xKhEGF3xsUJIgPaVsWeeBwoexMttueW6E8RS0Vp0o8w8dodjyQ==",
-      "path": "audioswitcher.audioapi/3.0.0",
-      "hashPath": "audioswitcher.audioapi.3.0.0.nupkg.sha512"
-    },
-    "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-O0XrFLuND0Ti/UmW24PvX36Tfhify6jOBpuIKw0wmWemzKQ6fS1uH36a+bNRny9LdqPGIQnFfDyieLo1otb/Lw==",
-      "path": "audioswitcher.audioapi.coreaudio/3.0.3",
-      "hashPath": "audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512"
-    },
     "CommunityToolkit.Maui/11.2.0": {
       "type": "package",
       "serviceable": true,
@@ -642,6 +617,13 @@
       "sha512": "sha512-uQC6rvxEBMJKFuTi2zYgONjgqAOYhF3VlRxe6J9KbO926ywRdxVL3twVO31lJJB3FVYDrRyc9sE+rawFwwalkw==",
       "path": "communitytoolkit.maui.core/11.2.0",
       "hashPath": "communitytoolkit.maui.core.11.2.0.nupkg.sha512"
+    },
+    "CSCore/1.2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DoQKUcdZLQawo3mOg8CvujJD9YkvTt6NtEu7S+OCo8+ySl8eCeUw4LFyL2E1OcAkPU918HZM6sUNcvIMcXWg6g==",
+      "path": "cscore/1.2.1.2",
+      "hashPath": "cscore.1.2.1.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.4": {
       "type": "package",
