@@ -1,113 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             x:Class="Audio_Control_Center_Application.MainPage">
+             x:Class="Audio_Control_Center_Application.MainPage"
+             Title="Audio Control Center">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25"
-            VerticalOptions="Center">
-            
-            <Label
-                x:Name="sampleText"/>
-            
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header Section -->
+        <Border Grid.Row="0"
+                StrokeThickness="0"
+                BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}"
+                Padding="20,20">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="10">
+                    <HorizontalStackLayout Spacing="12" HorizontalOptions="Start">
+                        <Label Text="🎚️"
+                               FontSize="32"
+                               VerticalOptions="Center"/>
+                        <Label Text="Audio Control Center"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="{AppThemeBinding Light=White, Dark={StaticResource PrimaryDarkText}}"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Start">
+                        <Ellipse x:Name="ConnectionIndicator"
+                                 WidthRequest="12"
+                                 HeightRequest="12"
+                                 Fill="{AppThemeBinding Light={StaticResource Gray400}, Dark={StaticResource Gray400}}"
+                                 VerticalOptions="Center"/>
+                        <Label x:Name="ConnectionStatusLabel"
+                               Text="Connecting..."
+                               FontSize="14"
+                               TextColor="{AppThemeBinding Light=White, Dark={StaticResource PrimaryDarkText}}"
+                               Opacity="0.95"
+                               VerticalOptions="Center"/>
+                        <Button x:Name="ReconnectButton"
+                                Text="🔄 Fix Connection"
+                                FontSize="12"
+                                BackgroundColor="Transparent"
+                                TextColor="{AppThemeBinding Light=White, Dark={StaticResource PrimaryDarkText}}"
+                                BorderColor="{AppThemeBinding Light=White, Dark={StaticResource PrimaryDarkText}}"
+                                BorderWidth="1"
+                                CornerRadius="5"
+                                Padding="8,4"
+                                IsVisible="False"
+                                Clicked="OnReconnectClicked"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                
+                <Button x:Name="SettingsButton"
+                        Grid.Column="1"
+                        Text="⚙️"
+                        FontSize="24"
+                        BackgroundColor="Transparent"
+                        TextColor="{AppThemeBinding Light=White, Dark={StaticResource PrimaryDarkText}}"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="25"
+                        Clicked="OnSettingsClicked"/>
+            </Grid>
+        </Border>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1" 
+                    Orientation="Horizontal"
+                    HorizontalScrollBarVisibility="Always">
             <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="100"
-                x:Name = "Container">
-                <!-- <VerticalStackLayout -->
-                <!--     Padding="0"> -->
-                <!--     -->
-                <!--     <Label -->
-                <!--         Text="Discord" -->
-                <!--         FontSize="20" -->
-                <!--         Margin="0"/> -->
-                <!--     <sliders:SfSlider  -->
-                <!--         Maximum="100" -->
-                <!--         Interval="10" -->
-                <!--         ShowTicks="True" -->
-                <!--         Orientation="Vertical" -->
-                <!--         Margin="0" -->
-                <!--         /> -->
-                <!--     <ImageButton -->
-                <!--         Source="discord.png" -->
-                <!--         MaximumWidthRequest="50" -->
-                <!--         MaximumHeightRequest="50" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!-- </VerticalStackLayout> -->
-                <!-- <VerticalStackLayout -->
-                <!--     Padding="0"> -->
-                <!--     -->
-                <!--     <Label -->
-                <!--         Text="Discord" -->
-                <!--         FontSize="20" -->
-                <!--         Margin="0"/> -->
-                <!--     <sliders:SfSlider  -->
-                <!--         Maximum="100" -->
-                <!--         Interval="10" -->
-                <!--         ShowTicks="True" -->
-                <!--         Orientation="Vertical" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!--     <ImageButton -->
-                <!--         Source="discord.png" -->
-                <!--         MaximumWidthRequest="50" -->
-                <!--         MaximumHeightRequest="50" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!-- </VerticalStackLayout> -->
-                <!-- <VerticalStackLayout -->
-                <!--     Padding="0"> -->
-                <!--     -->
-                <!--     <Label -->
-                <!--         Text="Discord" -->
-                <!--         FontSize="20" -->
-                <!--         Margin="0"/> -->
-                <!--     <sliders:SfSlider  -->
-                <!--         Maximum="100" -->
-                <!--         Interval="10" -->
-                <!--         ShowTicks="True" -->
-                <!--         Orientation="Vertical" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!--     <ImageButton -->
-                <!--         Source="discord.png" -->
-                <!--         MaximumWidthRequest="50" -->
-                <!--         MaximumHeightRequest="50" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!-- </VerticalStackLayout> -->
-                <!-- <VerticalStackLayout -->
-                <!--     Padding="0"> -->
-                <!--     -->
-                <!--     <Label -->
-                <!--         Text="Discord" -->
-                <!--         FontSize="20" -->
-                <!--         Margin="0"/> -->
-                <!--     <sliders:SfSlider  -->
-                <!--         Maximum="100" -->
-                <!--         Interval="10" -->
-                <!--         ShowTicks="True" -->
-                <!--         Orientation="Vertical" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!--     <ImageButton -->
-                <!--         Source="discord.png" -->
-                <!--         MaximumWidthRequest="50" -->
-                <!--         MaximumHeightRequest="50" -->
-                <!--         Margin="0" -->
-                <!--     /> -->
-                <!-- </VerticalStackLayout> -->
-                
-                
+                x:Name="Container"
+                Padding="20,30"
+                Spacing="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <!-- Sliders will be dynamically added here -->
             </HorizontalStackLayout>
-            
-
-            
-        </VerticalStackLayout>
-    </ScrollView>
+        </ScrollView>
+    </Grid>
 
 </ContentPage>

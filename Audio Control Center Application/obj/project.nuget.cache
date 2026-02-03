@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "fxRjHZieOig=",
+  "dgSpecHash": "qQbZKoMkw6w=",
   "success": true,
   "projectFilePath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Audio Control Center Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\carso\\.nuget\\packages\\communitytoolkit.maui\\11.2.0\\communitytoolkit.maui.11.2.0.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\communitytoolkit.maui.core\\11.2.0\\communitytoolkit.maui.core.11.2.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\cscore\\1.2.1.2\\cscore.1.2.1.2.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\googlegson\\2.11.0.5\\googlegson.2.11.0.5.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.4\\microsoft.extensions.configuration.9.0.4.nupkg.sha512",
@@ -49,13 +47,9 @@
     "C:\\Users\\carso\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.5\\runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.5\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.5\\runtime.osx-x64.runtime.native.system.io.ports.9.0.5.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\syncfusion.licensing\\29.2.7\\syncfusion.licensing.29.2.7.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\syncfusion.maui.core\\29.2.7\\syncfusion.maui.core.29.2.7.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\syncfusion.maui.sliders\\29.2.7\\syncfusion.maui.sliders.29.2.7.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\system.codedom\\10.0.0-preview.4.25258.110\\system.codedom.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\system.io.ports\\9.0.5\\system.io.ports.9.0.5.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\system.management\\10.0.0-preview.4.25258.110\\system.management.10.0.0-preview.4.25258.110.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\system.speech\\9.0.0\\system.speech.9.0.0.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.11\\xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",
@@ -146,7 +140,11 @@
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.9.0.2\\xamarin.kotlinx.coroutines.core.jvm.1.9.0.2.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.7.3.2\\xamarin.kotlinx.serialization.core.1.7.3.2.nupkg.sha512",
     "C:\\Users\\carso\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.2\\xamarin.kotlinx.serialization.core.jvm.1.7.3.2.nupkg.sha512",
-    "C:\\Users\\carso\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
+    "C:\\Users\\carso\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\9.0.5\\microsoft.netcore.app.crossgen2.win-x64.9.0.5.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.5\\microsoft.aspnetcore.app.runtime.win-x64.9.0.5.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.5.nupkg.sha512",
+    "C:\\Users\\carso\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.5\\microsoft.netcore.app.runtime.win-x64.9.0.5.nupkg.sha512"
   ],
   "logs": [
     {

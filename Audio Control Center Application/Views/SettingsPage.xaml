@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Audio_Control_Center_Application.Views.SettingsPage"
+             Title="Settings">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <!-- Serial Port Settings Section -->
+            <Frame HasShadow="True" 
+                   BorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}"
+                   CornerRadius="12"
+                   Padding="20">
+                <VerticalStackLayout Spacing="16">
+                    <Label Text="Serial Port Configuration"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+                    
+                    <!-- COM Port Picker -->
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="COM Port:"
+                               FontSize="16"
+                               TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"/>
+                        <Picker x:Name="ComPortPicker"
+                                Title="Select COM Port"
+                                ItemsSource="{Binding AvailablePorts}"
+                                SelectedItem="{Binding SelectedComPort}"
+                                ItemDisplayBinding="{Binding .}"/>
+                    </VerticalStackLayout>
+                    
+                    <!-- Baud Rate Picker -->
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Baud Rate:"
+                               FontSize="16"
+                               TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"/>
+                        <Picker x:Name="BaudRatePicker"
+                                Title="Select Baud Rate"
+                                ItemsSource="{Binding AvailableBaudRates}"
+                                SelectedItem="{Binding SelectedBaudRate}"
+                                ItemDisplayBinding="{Binding .}"/>
+                    </VerticalStackLayout>
+                    
+                    <!-- Refresh Ports Button -->
+                    <Button Text="🔄 Refresh COM Ports"
+                            Command="{Binding RefreshPortsCommand}"
+                            Margin="0,8,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <!-- Slider Settings Section -->
+            <Frame HasShadow="True" 
+                   BorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}"
+                   CornerRadius="12"
+                   Padding="20">
+                <VerticalStackLayout Spacing="16">
+                    <Label Text="Slider Configuration"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+                    
+                    <!-- Invert Sliders Switch -->
+                    <HorizontalStackLayout Spacing="12">
+                        <Switch IsToggled="{Binding InvertSliders}"
+                                OnColor="{StaticResource Primary}"/>
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="Invert Sliders"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"/>
+                            <Label Text="Inverts slider values (99% becomes 1%, 1% becomes 99%)"
+                                   FontSize="13"
+                                   TextColor="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray400}}"
+                                   LineBreakMode="WordWrap"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <!-- Info Frame -->
+            <Frame HasShadow="True" 
+                   BorderColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}"
+                   CornerRadius="12"
+                   Padding="16"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource Gray600}}">
+                <Label Text="💡 Note: Changing COM port or baud rate may require the application to reconnect. Your slider-to-application mappings are saved automatically."
+                       FontSize="13"
+                       TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
+                       LineBreakMode="WordWrap"/>
+            </Frame>
+            
+            <!-- Save Button -->
+            <Button Text="💾 Save Settings"
+                    Command="{Binding SaveSettingsCommand}"
+                    Margin="0,10,0,0"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    HeightRequest="50"/>
+                    
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

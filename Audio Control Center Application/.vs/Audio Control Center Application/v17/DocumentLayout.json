@@ -1,12 +1,82 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\mainthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:mainthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\sliderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:sliderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainThread.cs",
+              "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\MainThread.cs",
+              "RelativeDocumentMoniker": "MainThread.cs",
+              "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\MainThread.cs",
+              "RelativeToolTip": "MainThread.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T19:31:08.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainThread.cs",
+              "DocumentMoniker": "C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs",
+              "ToolTip": "C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs [Read Only]",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAHoAAAAtAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T19:21:54.215Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAYVAAAAAAAAAAAuwBcVAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-01-10T19:05:17.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SliderBuilder.cs",
+              "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\SliderBuilder.cs",
+              "RelativeDocumentMoniker": "SliderBuilder.cs",
+              "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\SliderBuilder.cs",
+              "RelativeToolTip": "SliderBuilder.cs",
+              "ViewState": "AgIAAOsFAAAAAAAAAAAwwO0FAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T09:26:31.76Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
