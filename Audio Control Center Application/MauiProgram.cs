@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-
 namespace Audio_Control_Center_Application
 {
     public static class MauiProgram

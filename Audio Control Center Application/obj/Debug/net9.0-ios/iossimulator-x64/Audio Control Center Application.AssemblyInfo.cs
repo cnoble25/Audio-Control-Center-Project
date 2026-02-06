@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Audio Control Center Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+86589eac2778bf948aba2105a0f65d981df900e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+00f6ce85aaa9220c5d0a203943f785e26a8f4949")]
 [assembly: System.Reflection.AssemblyProductAttribute("Audio Control Center Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Audio Control Center Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

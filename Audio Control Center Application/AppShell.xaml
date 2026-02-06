@@ -4,11 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Audio_Control_Center_Application"
-    Title="Audio_Control_Center_Application">
+    xmlns:views="clr-namespace:Audio_Control_Center_Application.Views"
+    Title="Audio Control Center">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    
+    <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate views:SettingsPage}"
+        Route="SettingsPage" />
 
 </Shell>
