@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using CSCore.CoreAudioAPI; // Required for Core Audio APIs from CSCore library
-
+//bruh
 public static class AudioController
 {
     private static readonly object audioControlLock = new object();
