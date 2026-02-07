@@ -3,18 +3,34 @@
   "WorkspaceRootPath": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\services\\systemtrayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:services\\systemtrayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\noisereductionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:noisereductionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\mainthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:mainthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\sliderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:sliderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|e:\\audio control center project\\audio-control-center-project\\audio control center application\\audiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5004A4-0576-4835-9FA6-EFE508C90AA9}|Audio Control Center Application.csproj|solutionrelative:audiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,52 +40,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SystemTrayService.cs",
+              "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Services\\SystemTrayService.cs",
+              "RelativeDocumentMoniker": "Services\\SystemTrayService.cs",
+              "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\Services\\SystemTrayService.cs",
+              "RelativeToolTip": "Services\\SystemTrayService.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:46:53.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainThread.cs",
               "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\MainThread.cs",
               "RelativeDocumentMoniker": "MainThread.cs",
               "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\MainThread.cs",
               "RelativeToolTip": "MainThread.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T19:31:08.053Z",
+              "WhenOpened": "2026-02-07T21:46:37.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "AudioController.cs",
+              "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\AudioController.cs",
+              "RelativeDocumentMoniker": "AudioController.cs",
+              "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\AudioController.cs",
+              "RelativeToolTip": "AudioController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAwwIwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:10:31.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainThread.cs",
               "DocumentMoniker": "C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs",
-              "ToolTip": "C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs [Read Only]",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAAHoAAAAtAAAAAQAAAA==",
+              "ToolTip": "C:\\Users\\carso\\AppData\\Local\\Temp\\.vsdbgsrc\\6d8a0ca5ed3924a92c40706dfc5aeeadc7c74c54338512b61960b5094f398076\\MainThread.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAnwHQAAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T19:21:54.215Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2026-02-07T20:37:07.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NoiseReductionFilter.cs",
+              "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\NoiseReductionFilter.cs",
+              "RelativeDocumentMoniker": "NoiseReductionFilter.cs",
+              "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\NoiseReductionFilter.cs",
+              "RelativeToolTip": "NoiseReductionFilter.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T04:52:30.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T04:49:46.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAAYVAAAAAAAAAAAuwBcVAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAUVAAAAAAAAAAAswAcVAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-01-10T19:05:17.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SliderBuilder.cs",
               "DocumentMoniker": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\SliderBuilder.cs",
               "RelativeDocumentMoniker": "SliderBuilder.cs",
               "ToolTip": "E:\\Audio Control Center Project\\Audio-Control-Center-Project\\Audio Control Center Application\\SliderBuilder.cs",
               "RelativeToolTip": "SliderBuilder.cs",
-              "ViewState": "AgIAAOsFAAAAAAAAAAAwwO0FAABRAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAiwM4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-10T09:26:31.76Z",
               "EditorCaption": ""

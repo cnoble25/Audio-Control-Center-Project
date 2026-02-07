@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
+﻿//using Android.Print;
+using Microsoft.Extensions.Logging;
 namespace Audio_Control_Center_Application
 {
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
-        {
+        { 
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
@@ -17,8 +18,12 @@ namespace Audio_Control_Center_Application
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
             return builder.Build();
-        }
+
+         }
+
+        
+
+
     }
 }

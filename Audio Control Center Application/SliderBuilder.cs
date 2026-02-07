@@ -20,8 +20,14 @@ public class SliderBuilder
     public HorizontalStackLayout? Containers;
     public static string[]? Applications;
     private Action<bool>? _connectionStatusCallback;
-    private AppSettings? _settings;
+    public AppSettings? _settings;
     private NoiseReductionFilter? _noiseFilter;
+    
+    // Throttling for serial data updates to reduce CPU usage
+    private DateTime _lastDataUpdate = DateTime.MinValue;
+    private readonly TimeSpan _dataUpdateThrottle = TimeSpan.FromMilliseconds(50); // Max 20 updates per second
+    private readonly double _valueChangeThreshold = 0.5; // Only update if value changed by > 0.5%
+    private double[]? _lastAudioValues; // Track last sent audio values to avoid unnecessary updates
 
     public SliderBuilder(HorizontalStackLayout slidersContainer, Action<bool>? connectionStatusCallback = null)
     {
@@ -29,10 +35,6 @@ public class SliderBuilder
         
         _connectionStatusCallback = connectionStatusCallback;
         _settings = AppSettings.Load();
-        
-        // Initialize noise reduction filter
-        // Parameters: historySize=5, alpha=0.3 (lower = more smoothing), medianWindow=3, maxChangeThreshold=10%
-        _noiseFilter = new NoiseReductionFilter(historySize: 5, alpha: 0.3, medianWindowSize: 3, maxChangeThreshold: 10.0);
         
         Containers = slidersContainer;
         
@@ -175,7 +177,7 @@ public class SliderBuilder
     {
         try
         {
-            // Unsubscribe all event handlers to prevent memory leaks
+            // Unsubscribe all event handlers from existing sliders to prevent memory leaks
             if (sliders != null && sliders.Length > 0)
             {
                 MainThread.BeginInvokeOnMainThread(() =>
@@ -184,21 +186,13 @@ public class SliderBuilder
                     {
                         for (int i = 0; i < sliders.Length; i++)
                         {
-                            if (sliders[i]?.ControlledSlider != null)
+                            if (sliders[i] != null)
                             {
-                                // Note: Cannot directly unsubscribe anonymous handlers, but we clear the slider reference
-                                // The GC will clean up when the slider is removed from the UI tree
-                                sliders[i].ControlledSlider = null;
-                            }
-                            if (sliders[i]?.VolumeLabel != null)
-                            {
-                                sliders[i].VolumeLabel = null;
-                            }
-                            if (sliders[i]?.ApplicationNameLabel != null)
-                            {
-                                sliders[i].ApplicationNameLabel = null;
+                                // Unsubscribe all event handlers (Picker.Focused, Picker.SelectedIndexChanged, Slider.ValueChanged)
+                                sliders[i].UnsubscribeEventHandlers();
                             }
                         }
+                        Debug.WriteLine($"Unsubscribed event handlers from {sliders.Length} slider(s)");
                     }
                     catch (Exception ex)
                     {
@@ -210,13 +204,6 @@ public class SliderBuilder
             // Clear the sliders array so they will be recreated from device data
             sliders = Array.Empty<SliderClass>();
             VerticalStackLayouts = null;
-            
-            // Reset noise filter when sliders are reset - cleanup old states
-            if (_noiseFilter != null)
-            {
-                _noiseFilter.ResetAll();
-                _noiseFilter.Cleanup(0); // Remove all filter states
-            }
             
             // Clear UI container if it exists
             if (Containers != null)
@@ -235,60 +222,12 @@ public class SliderBuilder
                 });
             }
             
-            // Force garbage collection hint (don't force full GC, just hint)
-            GC.Collect(0, GCCollectionMode.Optimized);
+            // Reset noise filter when sliders are reset - cleanup old states
+            
         }
         catch (Exception ex)
         {
             Debug.WriteLine($"Error in ResetSliders: {ex.GetType().Name} - {ex.Message}");
-        }
-    }
-    
-    public void Dispose()
-    {
-        try
-        {
-            // Unsubscribe serial port handler
-            if (serialPort != null)
-            {
-                try
-                {
-                    serialPort.DataReceived -= DataReceivedHandler;
-                    if (serialPort.IsOpen)
-                    {
-                        serialPort.Close();
-                    }
-                    serialPort.Dispose();
-                }
-                catch
-                {
-                    // Ignore disposal errors
-                }
-                finally
-                {
-                    serialPort = null;
-                }
-            }
-            
-            // Reset sliders (which will unsubscribe handlers)
-            ResetSliders();
-            
-            // Clear references
-            Containers = null;
-            _connectionStatusCallback = null;
-            _settings = null;
-            _noiseFilter = null;
-            Applications = null;
-            
-            // Clear singleton
-            if (Instance == this)
-            {
-                Instance = null;
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Error disposing SliderBuilder: {ex.GetType().Name} - {ex.Message}");
         }
     }
     
@@ -552,7 +491,8 @@ public class SliderBuilder
                 Padding = 20,
                 Margin = new Thickness(0, 0, 0, 0),
                 MinimumWidthRequest = 180,
-                MaximumWidthRequest = 180
+                MaximumWidthRequest = 180,
+                MinimumHeightRequest = 500  // Ensure frame is tall enough for vertical slider
             };
 
             // Main container for the slider card
@@ -560,7 +500,8 @@ public class SliderBuilder
             { 
                 Spacing = 16,
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Start
+                VerticalOptions = LayoutOptions.Start,
+                MinimumHeightRequest = 500  // Ensure container has enough height for vertical slider
             };
 
             // Volume percentage label (above slider)
@@ -601,7 +542,8 @@ public class SliderBuilder
             applicationPicker.Items.Add("System Volume");
             
             // Load applications lazily when picker is opened (avoids COMExceptions on startup)
-            applicationPicker.Focused += async (sender, e) =>
+            // Store handler reference for cleanup
+            EventHandler<FocusEventArgs> pickerFocusedHandler = async (sender, e) =>
             {
                 try
                 {
@@ -622,23 +564,16 @@ public class SliderBuilder
                             }
                         }
                     }
-                    
-                    // After loading applications, ensure saved mapping is selected
-                    _settings = AppSettings.Load(); // Reload to get latest settings
-                    string savedMapping = (_settings?.SliderToApplicationMapping != null && _settings.SliderToApplicationMapping.ContainsKey(sliderIndex))
-                        ? _settings.SliderToApplicationMapping[sliderIndex] 
-                        : null;
-                    
-                    if (!string.IsNullOrEmpty(savedMapping) && applicationPicker.Items.Contains(savedMapping))
-                    {
-                        applicationPicker.SelectedItem = savedMapping;
-                    }
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error loading applications for picker: {ex.GetType().Name} - {ex.Message}");
                 }
             };
+            applicationPicker.Focused += pickerFocusedHandler;
+            // Store picker and handler in slider for cleanup
+            sliders[sliderIndex].ApplicationPicker = applicationPicker;
+            sliders[sliderIndex].SetPickerFocusedHandler(pickerFocusedHandler);
             
             // Add any already-loaded applications (if enumeration completed)
             if (Applications != null && Applications.Length > 0)
@@ -652,34 +587,23 @@ public class SliderBuilder
                 }
             }
             
-            // Get saved mapping and ensure it's in the items list
-            _settings = AppSettings.Load(); // Reload to get latest settings
+            // Set selected item based on saved mapping or default
             string mappedApp = (_settings?.SliderToApplicationMapping != null && _settings.SliderToApplicationMapping.ContainsKey(sliderIndex))
                 ? _settings.SliderToApplicationMapping[sliderIndex] 
                 : (sliders[sliderIndex].ApplicationName ?? "System Volume");
             
-            // If the saved mapping exists but isn't in the picker yet, add it
-            // (This handles cases where the app isn't running but was previously mapped)
-            if (!string.IsNullOrEmpty(mappedApp) && mappedApp != "System Volume" && !applicationPicker.Items.Contains(mappedApp))
-            {
-                applicationPicker.Items.Add(mappedApp);
-                Debug.WriteLine($"Added saved mapping '{mappedApp}' to picker for slider {sliderIndex} (app may not be running)");
-            }
-            
-            // Set selected item based on saved mapping or default
-            if (!string.IsNullOrEmpty(mappedApp) && applicationPicker.Items.Contains(mappedApp))
+            if (applicationPicker.Items.Contains(mappedApp))
             {
                 applicationPicker.SelectedItem = mappedApp;
-                Debug.WriteLine($"Set picker for slider {sliderIndex} to saved mapping: {mappedApp}");
             }
             else
             {
                 applicationPicker.SelectedItem = "System Volume";
-                Debug.WriteLine($"Set picker for slider {sliderIndex} to default: System Volume");
             }
             
             // Handle selection change - use captured sliderIndex
-            applicationPicker.SelectedIndexChanged += async (sender, e) =>
+            // Store handler reference for cleanup
+            EventHandler pickerSelectedIndexChangedHandler = async (sender, e) =>
             {
                 try
                 {
@@ -717,6 +641,8 @@ public class SliderBuilder
                     Debug.WriteLine($"Error in picker SelectedIndexChanged: {ex.GetType().Name} - {ex.Message}");
                 }
             };
+            applicationPicker.SelectedIndexChanged += pickerSelectedIndexChangedHandler;
+            sliders[sliderIndex].SetPickerSelectedIndexChangedHandler(pickerSelectedIndexChangedHandler);
             
             cardContent.Add(applicationPicker);
             
@@ -741,25 +667,47 @@ public class SliderBuilder
             sliders[sliderIndex].ApplicationName = mappedApp == "System Volume" ? "" : mappedApp;
 
             // Standard MAUI Slider (vertical orientation achieved with rotation)
+            // When rotated -90 degrees, width and height swap visually
+            // So we set WidthRequest to the desired visual height (400) and HeightRequest to thumb width
+            // Apply visual inversion if setting is enabled (invert the displayed slider position)
+            _settings = AppSettings.Load();
+            double sliderDisplayValue = _settings?.InvertSliders == true 
+                ? 100 - sliders[sliderIndex].Value 
+                : sliders[sliderIndex].Value;
+            
             Slider controlledSlider = new Slider
             {
-                Value = sliders[sliderIndex].Value,
-                HeightRequest = 400,
-                WidthRequest = 80,
+                Value = sliderDisplayValue,  // Display inverted value if setting is enabled
+                WidthRequest = 400,  // This becomes the visual height after -90 rotation
+                HeightRequest = 50,  // This becomes the visual width after -90 rotation (thumb width)
                 Maximum = 100,
                 Minimum = 0,
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.FillAndExpand
+                VerticalOptions = LayoutOptions.Center
             };
             
             // Rotate slider for vertical orientation
             controlledSlider.Rotation = -90;
             
+            // Wrap slider in a container to ensure it's visible when rotated
+            // The container needs to be large enough to accommodate the rotated slider's bounding box
+            // After -90 rotation, a 400x50 slider still needs a 400x400 container (or larger) to be fully visible
+            Grid sliderContainer = new Grid
+            {
+                WidthRequest = 400,  // Container width must accommodate rotated slider's bounding box
+                HeightRequest = 400,  // Container height must accommodate rotated slider's bounding box
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Margin = new Thickness(0, 8, 0, 8)
+            };
+            sliderContainer.Add(controlledSlider);
+            
             // Add animation to slider value changes - use captured sliderIndex and label reference
             // Capture the VolumeLabel reference to avoid null reference issues in closure
             Label? capturedVolumeLabel = sliders[sliderIndex].VolumeLabel;
             
-            controlledSlider.ValueChanged += async (sender, e) =>
+            // Store handler reference for cleanup
+            EventHandler<ValueChangedEventArgs> sliderValueChangedHandler = async (sender, e) =>
             {
                 try
                 {
@@ -797,24 +745,19 @@ public class SliderBuilder
                     // Update slider's stored value
                     if (sliders != null && sliderIndex >= 0 && sliderIndex < sliders.Length && sliders[sliderIndex] != null)
                     {
-                        sliders[sliderIndex].Value = e.NewValue;
+                        // Always reload settings to ensure we have the latest inversion setting
+                        _settings = AppSettings.Load();
+                        
+                        // If inversion is enabled, the slider displays inverted, so we need to invert back to get actual value
+                        double actualValue = _settings?.InvertSliders == true 
+                            ? 100 - e.NewValue 
+                            : e.NewValue;
+                        
+                        sliders[sliderIndex].Value = actualValue;
                         
                         // Update audio volume immediately when user manually moves slider
-                        double sliderValue = e.NewValue;
-                        
-                        // Invert ONLY when sending to audio if inversion is enabled
-                        double audioVolumeValue;
-                        if (_settings?.InvertSliders == true)
-                        {
-                            // Invert right before sending to Windows audio
-                            audioVolumeValue = 100 - sliderValue;
-                        }
-                        else
-                        {
-                            // No inversion, use value as-is
-                            audioVolumeValue = sliderValue;
-                        }
-                        
+                        // Use the actual (non-inverted) value for audio
+                        double audioVolumeValue = actualValue;
                         double audioVolume = Math.Clamp(audioVolumeValue / 100, 0.0, 1.0);
                         
                         // Get application name for this slider
@@ -847,8 +790,10 @@ public class SliderBuilder
                     Debug.WriteLine($"Error in slider ValueChanged: {ex.GetType().Name} - {ex.Message}\nStack trace: {ex.StackTrace}");
                 }
             };
+            controlledSlider.ValueChanged += sliderValueChangedHandler;
+            sliders[sliderIndex].SetSliderValueChangedHandler(sliderValueChangedHandler);
             
-            cardContent.Add(controlledSlider);
+            cardContent.Add(sliderContainer);
             sliders[sliderIndex].SetControlledSlider(controlledSlider);
 
             // Icon button (optional - can be styled better)
@@ -1395,6 +1340,16 @@ public class SliderBuilder
             }
 
             double[] sliderValues = ConvertStringToDoubleArray(data);
+            
+            // Throttle updates to reduce CPU usage - skip if too soon since last update
+            var now = DateTime.UtcNow;
+            var timeSinceLastUpdate = now - _lastDataUpdate;
+            if (timeSinceLastUpdate < _dataUpdateThrottle)
+            {
+                return; // Skip this update - too frequent
+            }
+            _lastDataUpdate = now;
+            
             Debug.WriteLine($"Received data: {data}");
            
             MainThread.BeginInvokeOnMainThread(async () =>
@@ -1431,34 +1386,42 @@ public class SliderBuilder
                         
                         double rawPercentage = 100 * sliderValues[i] / 1030;
                         
-                        // Apply noise reduction filter to smooth noisy input using previous values
+                        // Apply noise reduction filter to smooth noisy input
                         double filteredPercentage = _noiseFilter?.Filter(i, rawPercentage) ?? rawPercentage;
                         
-                        // Store filtered value - don't invert for display
-                        sliders[i].SetValue(filteredPercentage, animate: false); // Don't animate serial updates
+                        // Only update UI if value changed significantly to reduce CPU usage
+                        double currentValue = sliders[i].Value;
+                        double valueChange = Math.Abs(filteredPercentage - currentValue);
                         
-                        // Update volume label with inverted display value if inversion is enabled
-                        // Use filtered value for display consistency
-                        if (sliders[i].VolumeLabel != null)
+                        if (valueChange > _valueChangeThreshold)
                         {
-                            _settings = AppSettings.Load();
-                            double displayValue = _settings?.InvertSliders == true 
-                                ? 100 - filteredPercentage 
-                                : filteredPercentage;
+                            // Store filtered value - don't invert for display
+                            sliders[i].SetValue(filteredPercentage, animate: false); // Don't animate serial updates
                             
-                            MainThread.BeginInvokeOnMainThread(() =>
+                            // Update volume label with inverted display value if inversion is enabled
+                            if (sliders[i].VolumeLabel != null)
                             {
-                                if (sliders[i]?.VolumeLabel != null)
-                                {
-                                    sliders[i].VolumeLabel.Text = $"{displayValue:F0}%";
-                                }
-                            });
+                                _settings = AppSettings.Load();
+                                double displayValue = _settings?.InvertSliders == true 
+                                    ? 100 - filteredPercentage 
+                                    : filteredPercentage;
+                                
+                                sliders[i].VolumeLabel.Text = $"{displayValue:F0}%";
+                            }
                         }
                     }
 
-                    // Prepare volume updates
+                    // Prepare volume updates - only send if values changed significantly
                     string[] processNames = new string[sliders.Length];
                     double[] volumes = new double[sliders.Length];
+                    bool hasSignificantChange = false;
+                    
+                    // Initialize last audio values array if needed
+                    if (_lastAudioValues == null || _lastAudioValues.Length != sliders.Length)
+                    {
+                        _lastAudioValues = new double[sliders.Length];
+                        Array.Fill(_lastAudioValues, -1); // Initialize to -1 to force first update
+                    }
                     
                     for (int i = 0; i < sliders.Length; i++)
                     {
@@ -1487,30 +1450,48 @@ public class SliderBuilder
                         // "System Volume" means empty string for master volume control
                         processNames[i] = appName == "System Volume" ? "" : appName;
                         
-                        // Always reload settings to ensure we have the latest inversion setting
-                        _settings = AppSettings.Load();
-                        
-                        // Get slider value (raw, not inverted)
+                        // Get slider value (actual value - never inverted for audio)
+                        // The Value property stores the actual value, inversion only affects UI display
                         double sliderValue = sliders[i].Value;
+                        double audioVolumeScalar = Math.Clamp(sliderValue / 100, 0.0, 1.0);
                         
-                        // Invert ONLY when sending to audio if inversion is enabled
-                        double audioVolumeValue;
-                        if (_settings?.InvertSliders == true)
+                        // Only update audio if value changed significantly (reduces CPU usage)
+                        double lastAudioValue = _lastAudioValues[i];
+                        if (lastAudioValue < 0 || Math.Abs(audioVolumeScalar - lastAudioValue) > (_valueChangeThreshold / 100.0))
                         {
-                            // Invert right before sending to Windows audio
-                            audioVolumeValue = 100 - sliderValue;
+                            volumes[i] = audioVolumeScalar;
+                            _lastAudioValues[i] = audioVolumeScalar;
+                            hasSignificantChange = true;
                         }
                         else
                         {
-                            // No inversion, use value as-is
-                            audioVolumeValue = sliderValue;
+                            // Value hasn't changed enough - skip this slider
+                            volumes[i] = -1; // Mark as skip
                         }
-                        
-                        volumes[i] = Math.Clamp(audioVolumeValue / 100, 0.0, 1.0);
                     }
                     
-                    // Apply volume changes - use optimized routing function
-                    AudioController.SetVolumes(processNames, volumes);
+                    // Only apply volume changes if there were significant changes (reduces CPU usage)
+                    if (hasSignificantChange)
+                    {
+                        // Filter out skipped sliders (-1 values)
+                        var validProcessNames = new List<string>();
+                        var validVolumes = new List<double>();
+                        
+                        for (int i = 0; i < processNames.Length; i++)
+                        {
+                            if (volumes[i] >= 0) // Only include sliders with significant changes
+                            {
+                                validProcessNames.Add(processNames[i]);
+                                validVolumes.Add(volumes[i]);
+                            }
+                        }
+                        
+                        if (validVolumes.Count > 0)
+                        {
+                            // Apply volume changes - use optimized routing function
+                            AudioController.SetVolumes(validProcessNames.ToArray(), validVolumes.ToArray());
+                        }
+                    }
                 }
                 catch (IndexOutOfRangeException ex)
                 {

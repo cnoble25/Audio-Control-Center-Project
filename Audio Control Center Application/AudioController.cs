@@ -66,10 +66,16 @@ public static class AudioController
     /// </summary>
     public static void SetSystemVolume(double volumeScalar)
     {
+
         if (volumeScalar < 0.0 || volumeScalar > 1.0)
         {
             Console.WriteLine($"Invalid volume scalar: {volumeScalar}. Must be between 0.0 and 1.0.");
             return;
+        }
+        double newVolumeScalar = volumeScalar;
+        if (SliderBuilder.Instance._settings?.InvertSliders == true)
+        {
+            newVolumeScalar = 1.0 - volumeScalar; // Invert the volume scalar if setting is enabled
         }
 
         // Use thread pool with proper thread management
@@ -81,7 +87,7 @@ public static class AudioController
                 {
                     var now = DateTime.UtcNow;
                     var timeSinceLastUpdate = now - lastSystemVolumeUpdate;
-                    var volumeChanged = Math.Abs(volumeScalar - lastSystemVolumeValue) > SystemVolumeChangeThreshold;
+                    var volumeChanged = Math.Abs(newVolumeScalar - lastSystemVolumeValue) > SystemVolumeChangeThreshold;
 
                     // Periodic cache cleanup
                     CleanupCacheIfNeeded();
@@ -115,8 +121,8 @@ public static class AudioController
 
                         if (cachedEndpointVolume != null)
                         {
-                            cachedEndpointVolume.MasterVolumeLevelScalar = Convert.ToSingle(volumeScalar);
-                            lastSystemVolumeValue = volumeScalar;
+                            cachedEndpointVolume.MasterVolumeLevelScalar = Convert.ToSingle(newVolumeScalar);
+                            lastSystemVolumeValue = newVolumeScalar;
                             lastSystemVolumeUpdate = now;
                         }
                     }
@@ -144,6 +150,11 @@ public static class AudioController
     /// </summary>
     private static void SetSingleApplicationVolume(string processName, double volumeScalar)
     {
+        double newVolumeScalar = volumeScalar;
+        if (SliderBuilder.Instance._settings?.InvertSliders == true)
+        {
+            newVolumeScalar = 1.0 - volumeScalar; // Invert the volume scalar if setting is enabled
+        }
         if (string.IsNullOrWhiteSpace(processName) || volumeScalar < 0.0 || volumeScalar > 1.0)
         {
             return;
@@ -201,7 +212,7 @@ public static class AudioController
                                                 {
                                                     if (simpleVolume != null)
                                                     {
-                                                        simpleVolume.MasterVolume = Convert.ToSingle(volumeScalar);
+                                                        simpleVolume.MasterVolume = Convert.ToSingle(newVolumeScalar);
                                                         return; // Found and updated, exit early
                                                     }
                                                 }
@@ -232,6 +243,7 @@ public static class AudioController
     /// </summary>
     public static void SetApplicationVolumes(string[] processNames, double[] volumeScalars)
     {
+
         if (processNames == null || volumeScalars == null)
         {
             Console.WriteLine("Process names or volume scalars cannot be null.");
@@ -271,6 +283,7 @@ public static class AudioController
             // Process each application update sequentially in background thread (fast, no blocking)
             foreach (var update in appUpdates)
             {
+                
                 SetSingleApplicationVolume(update.processName, update.volume);
             }
         });
@@ -284,6 +297,7 @@ public static class AudioController
     /// </summary>
     public static void SetVolumes(string[] processNames, double[] volumeScalars)
     {
+       
         if (processNames == null || volumeScalars == null || processNames.Length != volumeScalars.Length)
         {
             Console.WriteLine("Invalid parameters for SetVolumes.");
@@ -297,14 +311,17 @@ public static class AudioController
 
         for (int i = 0; i < processNames.Length && i < volumeScalars.Length; i++)
         {
-            if (string.IsNullOrWhiteSpace(processNames[i]))
+            if (volumeScalars[i] != 0)
             {
-                systemVolume = volumeScalars[i];
-            }
-            else
-            {
-                appNames.Add(processNames[i]);
-                appVolumes.Add(volumeScalars[i]);
+                if (string.IsNullOrWhiteSpace(processNames[i]))
+                {
+                    systemVolume = volumeScalars[i];
+                }
+                else
+                {
+                    appNames.Add(processNames[i]);
+                    appVolumes.Add(volumeScalars[i]);
+                }
             }
         }
 
@@ -323,7 +340,12 @@ public static class AudioController
     
     public static void SetApplicationVolume(string processName, double volumeScalar)
 {
-    if(processName == null)
+        double newVolumeScalar = volumeScalar;
+        if (SliderBuilder.Instance._settings?.InvertSliders == true)
+        {
+            newVolumeScalar = 1.0 - volumeScalar; // Invert the volume scalar if setting is enabled
+        }
+        if (processName == null)
     {
         return;
     }
@@ -339,7 +361,7 @@ public static class AudioController
                     {
                         using (var endpointVolume = AudioEndpointVolume.FromDevice(device))
                         {
-                            endpointVolume.MasterVolumeLevelScalar = Convert.ToSingle(volumeScalar);
+                            endpointVolume.MasterVolumeLevelScalar = Convert.ToSingle(newVolumeScalar);
                         }
                     }
                     else
@@ -375,7 +397,7 @@ public static class AudioController
                                                     {
                                                         if (simpleVolume != null)
                                                         {
-                                                            simpleVolume.MasterVolume = Convert.ToSingle(volumeScalar);
+                                                            simpleVolume.MasterVolume = Convert.ToSingle(newVolumeScalar);
                                                             return;
                                                         }
                                                     }

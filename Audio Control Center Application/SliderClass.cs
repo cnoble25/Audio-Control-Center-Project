@@ -16,6 +16,12 @@ public class SliderClass
     
     public ImageButton? ApplicationIconButton { get; set; }
     
+    // Store event handler references for proper cleanup
+    public Picker? ApplicationPicker { get; set; }
+    private EventHandler<FocusEventArgs>? _pickerFocusedHandler;
+    private EventHandler? _pickerSelectedIndexChangedHandler;
+    private EventHandler<ValueChangedEventArgs>? _sliderValueChangedHandler;
+    
     
     public SliderClass(double value, string? applicationPath, string? applicationName)
     {
@@ -59,12 +65,73 @@ public class SliderClass
         VolumeLabel = label;
     }
     
+    public void SetPickerFocusedHandler(EventHandler<FocusEventArgs> handler)
+    {
+        _pickerFocusedHandler = handler;
+    }
+    
+    public void SetPickerSelectedIndexChangedHandler(EventHandler handler)
+    {
+        _pickerSelectedIndexChangedHandler = handler;
+    }
+    
+    public void SetSliderValueChangedHandler(EventHandler<ValueChangedEventArgs> handler)
+    {
+        _sliderValueChangedHandler = handler;
+    }
+    
+    public void UnsubscribeEventHandlers()
+    {
+        try
+        {
+            // Unsubscribe picker handlers
+            if (ApplicationPicker != null)
+            {
+                if (_pickerFocusedHandler != null)
+                {
+                    ApplicationPicker.Focused -= _pickerFocusedHandler;
+                    _pickerFocusedHandler = null;
+                }
+                if (_pickerSelectedIndexChangedHandler != null)
+                {
+                    ApplicationPicker.SelectedIndexChanged -= _pickerSelectedIndexChangedHandler;
+                    _pickerSelectedIndexChangedHandler = null;
+                }
+                ApplicationPicker = null;
+            }
+            
+            // Unsubscribe slider handler
+            if (ControlledSlider != null && _sliderValueChangedHandler != null)
+            {
+                ControlledSlider.ValueChanged -= _sliderValueChangedHandler;
+                _sliderValueChangedHandler = null;
+            }
+            
+            // Clear UI element references
+            ControlledSlider = null;
+            VolumeLabel = null;
+            ApplicationNameLabel = null;
+            ApplicationIconButton = null;
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Error unsubscribing event handlers: {ex.GetType().Name} - {ex.Message}");
+        }
+    }
+    
     public void SetValue(double value, bool animate = true)
     {
-        Value = value;
+        Value = value; // Store the ACTUAL value (never inverted - this is what controls audio)
         
         try
         {
+            // Load settings to check if inversion is enabled for UI display ONLY
+            var settings = Audio_Control_Center_Application.Models.AppSettings.Load();
+            // Apply inversion ONLY for UI display - the stored Value remains unchanged (actual value)
+            double sliderDisplayValue = settings?.InvertSliders == true 
+                ? 100 - Value 
+                : Value;
+            
             if (ControlledSlider != null)
             {
                 if (animate)
@@ -77,7 +144,7 @@ public class SliderClass
                             if (ControlledSlider == null) return;
                             
                             double currentValue = ControlledSlider.Value;
-                            double targetValue = Value;
+                            double targetValue = sliderDisplayValue; // Use inverted display value for UI
                             double steps = 10;
                             double increment = (targetValue - currentValue) / steps;
                             
@@ -100,11 +167,12 @@ public class SliderClass
                 }
                 else
                 {
-                    ControlledSlider.Value = Value;
+                    ControlledSlider.Value = sliderDisplayValue; // Use inverted display value for UI
                 }
             }
             
             // Update the volume percentage label with animation
+            // Display inverted value in label if inversion is enabled, but stored Value is unchanged
             if (VolumeLabel != null)
             {
                 MainThread.BeginInvokeOnMainThread(async () =>
@@ -114,7 +182,7 @@ public class SliderClass
                         var label = VolumeLabel; // Capture reference
                         if (label == null) return;
                         
-                        // Load settings to check if inversion is enabled
+                        // Load settings to check if inversion is enabled for display
                         var settings = Audio_Control_Center_Application.Models.AppSettings.Load();
                         double displayValue = settings?.InvertSliders == true 
                             ? 100 - Value 

@@ -1,0 +1,43 @@
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.csproj.AssemblyReference.cache
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.inputs
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@3x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@3x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@3x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\discord.png
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.stamp
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Regular.ttf
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Semibold.ttf
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\actool\_PartialAppManifest.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\actool\_BundleResourceWithLogicalName.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\actool\_ProcessedImageAssetsPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ibtool\_ProcessedInterfaceDefinitionsPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\copySceneKitAssets\_ProcessedSceneKitAssetsPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\collada\_ProcessedColladaAssetsPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\atlas\_ProcessedTextureAtlasesPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\coremlc\_PartialAppManifest.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\coremlc\_BundleResourceWithLogicalName.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\_ProcessedBundleResourcesPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\_ProcessedContentPath.items
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.AssemblyInfoInputs.cache
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.AssemblyInfo.cs
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.csproj.CoreCompileInputs.cache
+E:\Audio Control Center Project\Audio-Control-Center-Project\Audio Control Center Application\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Audio Control Center Application.sourcelink.json
